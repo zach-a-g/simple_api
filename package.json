@@ -1,0 +1,28 @@
+{
+  "name": "simple_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:connect": "psql postgres://luyhcsya:k41Cu-4PhoGA9jtF5TX5eRTe4SSr1iuw@chunee.db.elephantsql.com/luyhcsya",
+    "db:init": "psql -f ./sql/schema.sql postgres://luyhcsya:k41Cu-4PhoGA9jtF5TX5eRTe4SSr1iuw@chunee.db.elephantsql.com/luyhcsya",
+    "db:seed": "psql -f ./sql/seed.sql postgres://luyhcsya:k41Cu-4PhoGA9jtF5TX5eRTe4SSr1iuw@chunee.db.elephantsql.com/luyhcsya",
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "node": "^16.5.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.12",
+    "pg-promise": "^10.10.2",
+    "slugify": "^1.6.0"
+  }
+}
